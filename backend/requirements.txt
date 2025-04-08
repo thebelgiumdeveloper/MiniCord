@@ -1,0 +1,7 @@
+pandas==2.2.3
+faker==37.1.0
+fastapi==0.115.12
+python-dotenv==1.1.0
+bcrypt==4.3.0
+cryptography==44.0.2
+pyjwt==2.10.1
