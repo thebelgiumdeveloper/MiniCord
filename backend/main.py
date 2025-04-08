@@ -41,8 +41,9 @@ def decrypt_value(encrypted_data: bytes, password: str, salt: bytes, return_int=
     decrypted = aesgcm.decrypt(nonce, ciphertext, None).decode('utf-8')
     return int(decrypted) if return_int else decrypted
 
+# This should not be pushed to production. This is for tests only !
 @app.get('/create_db')
-async def crate_db(request: Request):
+async def create_db(request: Request):
     if os.getenv('ADMIN_SECRET') is None:
         return Response(status_code=404)
 
