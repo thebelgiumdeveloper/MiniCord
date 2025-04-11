@@ -1,0 +1,25 @@
+---
+import "../assets/app.css";
+---
+<!doctype html>
+<html class="h-full" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+		<style is:global>
+			.svg-inline--fa {
+				overflow: visible;
+				box-sizing: content-box;
+				display: inline-block;
+				height: 1em;
+				vertical-align: -0.125em;
+			}
+		</style>
+	</head>
+	<body class="h-full">
+		<slot />
+	</body>
+</html>

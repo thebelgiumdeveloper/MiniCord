@@ -1,0 +1,23 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+import { library, icon } from "@fortawesome/fontawesome-svg-core";
+import { faUser, faKey, faMailBulk } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faUser);
+const userIcon = icon({ prefix: "fas", iconName: faUser.iconName });
+---
+
+<div class="grid place-content-center h-full">
+    <div class="bg-base-200 p-4 rounded-lg">
+        <label class="input">
+            <Fragment class="h-[1em] opacity-50" set:html={userIcon.html} />
+            <input type="text" required placeholder="Nom d'utilisateur" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
+        </label>
+        <label class="input">
+            <Fragment class="h-[1em] opacity-50" set:html={userIcon.html} />
+            <input type="text" required placeholder="Mot de passe" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
+        </label>
+        <button class="btn btn-neutral font-normal w-full rounded-full mt-4">Login</button>
+    </div>
+</div>
